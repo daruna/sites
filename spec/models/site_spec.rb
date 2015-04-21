@@ -1,5 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe Site, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Site do
+  context 'validations' do
+    it { is_expected.to validate_presence_of :title }
+  end
 end

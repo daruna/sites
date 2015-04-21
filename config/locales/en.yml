@@ -9,6 +9,8 @@ en:
       title: Список сайтов
       table_title: Название сайта
       actions: Действия
+      status: Статус
+      last_update_time: Последнее обновление
       edit: Редактировать
       show: Посмотреть
       delete: Удалить

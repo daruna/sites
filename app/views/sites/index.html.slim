@@ -5,11 +5,19 @@ h1= t('.title')
     thead
       tr
         th= t('.table_title')
+        th= t('.status')
+        th= t('.last_update_time')
         th= t('.actions')
 
     - @sites.each do |site|
       tr
         td= site.title
+        td
+          - if site.available
+            .label.label-success OK
+          - else
+            .label.label-danger BAD
+        td= l(site.updated_at, format: :long)    
         td.actions
           = link_to(site, class: 'btn') do
             i.icon-eye-open
