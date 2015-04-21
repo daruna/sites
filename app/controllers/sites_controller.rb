@@ -19,7 +19,7 @@ class SitesController < ApplicationController
     @site = Site.new(site_params)
 
     if @site.save
-      redirect_to @site, flash: { success: 'Запись успешно создана' }
+      redirect_to sites_url, flash: { success: 'Запись успешно создана' }
     else
       render :new
     end
@@ -27,7 +27,7 @@ class SitesController < ApplicationController
 
   def update
     if @site.update(site_params)
-      redirect_to @site, flash: { success: 'Запись успешно обновлена' }
+      redirect_to sites_url, flash: { success: 'Запись успешно обновлена' }
     else
       render :edit
     end

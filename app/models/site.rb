@@ -3,7 +3,7 @@ class Site < ActiveRecord::Base
 
   before_create :check_available
 
-  paginates_per 10
+  paginates_per 6
 
   def available?
     uri = URI(title)
