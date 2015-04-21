@@ -12,4 +12,6 @@ en:
         new:
           title: Название
         edit:
-          title: Название  
+          title: Название
+        show:
+          title: Название   

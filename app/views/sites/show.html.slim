@@ -10,6 +10,6 @@
   .form-actions
     = link_to(edit_site_path(@site), class: 'btn btn-primary') do
       i.icon-pencil.icon-white
-      | Edit
-    '  or
-    = link_to 'Back', :back
+      = t('.edit')
+    '  или
+    = link_to t('.back'), :back

@@ -2,7 +2,7 @@ class SitesController < ApplicationController
   before_action :set_site, only: [:show, :edit, :update, :destroy]
 
   def index
-    @sites = Site.order(:title).page params[:page]
+    @sites = Site.order(:created_at).page params[:page]
   end
 
   def show

@@ -21,4 +21,7 @@ en:
       back: Назад
     edit:
       title: Редактировать
+      back: На главную
+    show:
       back: Назад
+      edit: Изменить
