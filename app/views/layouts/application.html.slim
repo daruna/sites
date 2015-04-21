@@ -1,0 +1,25 @@
+doctype html
+
+html
+
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+
+    title= 'Sites'
+
+    = csrf_meta_tags
+
+    /! Le styles
+    = stylesheet_link_tag :application
+
+  body
+    #root
+
+      .container
+
+        = render "messages"
+
+        = yield
+
+    = javascript_include_tag :application

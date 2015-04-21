@@ -1,0 +1,15 @@
+.show-item
+  .well.brand.form-horizontal
+
+    .control-group
+      label.control-label
+        | Title
+      .controls
+        .input-xlarge.uneditable-input.string.span7
+          = @site.title
+  .form-actions
+    = link_to(edit_site_path(@site), class: 'btn btn-primary') do
+      i.icon-pencil.icon-white
+      | Edit
+    '  or
+    = link_to 'Back', :back
