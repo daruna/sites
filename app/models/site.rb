@@ -1,5 +1,6 @@
 class Site < ActiveRecord::Base
   validates :title, presence: true, uniqueness: true
+  validate :site_url_must_be_correct
 
   before_create :check_available
 
@@ -19,6 +20,14 @@ class Site < ActiveRecord::Base
   private
 
   def check_available
-    self.available = true if self.available?
+    self.available = true if available?
+  end
+
+  def site_url_must_be_correct
+    uri_correct = !!URI(title).scheme
+    if !uri_correct
+      errors.add(:title, 'the site url is incorrect!')
+      false
+    end
   end
 end
